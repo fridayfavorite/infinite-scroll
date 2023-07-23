@@ -10,7 +10,7 @@ import { delay } from "rxjs/operators";
 })
 export class FetchDataService {
 
-  totalItems: number = 20;
+  totalItems: number = 100;
 
   constructor() { }
 
@@ -28,6 +28,6 @@ export class FetchDataService {
       if(i < this.totalItems) finalResult.items.push(`Item ${i + 1}`);
     }
 
-    return of(finalResult).pipe(delay(2000));
+    return of(finalResult).pipe(delay(1000));
   }
 }
